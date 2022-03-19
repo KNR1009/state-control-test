@@ -2,18 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-import { store } from "./app/store";
-import { Provider } from "react-redux";
 import * as serviceWorker from "./serviceWorker";
 import { RecoilRoot } from "recoil";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <RecoilRoot>
-        <App />
-      </RecoilRoot>
-    </Provider>
+    <RecoilRoot>
+      <App />
+    </RecoilRoot>
   </React.StrictMode>,
   document.getElementById("root")
 );

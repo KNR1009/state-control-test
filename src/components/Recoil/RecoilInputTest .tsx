@@ -1,9 +1,9 @@
 import React from "react";
 import { useSetRecoilState } from "recoil";
-import taskState from "../../recoil/atoms/taskState";
+import recoilTestState from "../../recoil/atoms/taskState";
 
 export const RecoilInputTest = () => {
-  const setTask = useSetRecoilState(taskState);
+  const setTask = useSetRecoilState(recoilTestState);
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setTask(e.target.value);

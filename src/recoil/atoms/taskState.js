@@ -1,8 +1,8 @@
 import { atom } from "recoil";
 
-const taskState = atom({
-  key: "taskState",
+const recoilTestState = atom({
+  key: "recoilTestState",
   default: "未入力",
 });
 
-export default taskState;
+export default recoilTestState;
