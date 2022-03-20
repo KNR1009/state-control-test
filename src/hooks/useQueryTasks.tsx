@@ -13,6 +13,6 @@ export const useQueryTasks = () => {
     queryKey: "tasks",
     queryFn: getTasks,
     // cacheTime: 5000,
-    staleTime: 5000,
+    staleTime: 10000,
   });
 };
