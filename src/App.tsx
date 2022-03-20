@@ -1,13 +1,22 @@
 import "./App.css";
-import { RecoilInputTest } from "./components/Recoil/RecoilInputTest ";
-import { RecoilOutput } from "./components/Recoil/RecoilOutput";
+import { BrowserRouter, Route } from "react-router-dom";
+import { Home } from "./components/pages/Home";
+import { RecoilTest } from "./components/pages/Recoil";
+import { Tasks } from "./components/pages/Task";
 
 function App() {
   return (
-    <div className="App">
-      <RecoilInputTest></RecoilInputTest>
-      <RecoilOutput></RecoilOutput>
-    </div>
+    <BrowserRouter>
+      <Route exact path="/">
+        <Home></Home>
+      </Route>
+      <Route path="/recoil">
+        <RecoilTest></RecoilTest>
+      </Route>
+      <Route path="/tasks">
+        <Tasks></Tasks>
+      </Route>
+    </BrowserRouter>
   );
 }
 
